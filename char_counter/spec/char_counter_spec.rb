@@ -7,14 +7,16 @@ describe 'CharCounter' do
 #    dic = CharCounter.count('a')
     cc = CharCounter.new
     dic = cc.count('a')
-    dic['a'].should be 1
-  end
-=begin
-  it 'should return {b=>nil} when string is a' do
-    dic = CharCounter.count('a')
-    dic['b'].should be nil
+    dic['a'].should be 1 #esto
   end
 
+  it 'should return {b=>nil} when string is a' do
+    charCounter = CharCounter.new
+    dic = charCounter.count('a')
+    #dic = CharCounter.count('a')
+    dic['b'].should be nil # esto
+  end
+=begin
   it 'should return {a=>2,t=>1,d=>1,0=>1 } when string is atado' do
     dic = CharCounter.count('atado')
     dic['a'].should be 2
