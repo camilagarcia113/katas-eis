@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/char_counter/model/char_counter.rb" line="9" />
+    <bookmark url="file://$PROJECT_DIR$/char_counter/model/char_counter.rb" line="14" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="363b4458-460b-4613-9876-5bc6a7158d5c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/char_counter/model/char_counter.rb" afterPath="$PROJECT_DIR$/char_counter/model/char_counter.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/char_counter/spec/char_counter_spec.rb" afterPath="$PROJECT_DIR$/char_counter/spec/char_counter_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="katas-eis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +24,7 @@
     <SUITE FILE_PATH="coverage/katas-eis@CharCounter_should_return__a__2_t__1_d__1_0__1___when_string_is_atado__katas_eis.coverage" NAME="CharCounter should return {a=&gt;2,t=&gt;1,d=&gt;1,0=&gt;1 } when string is atado: katas-eis Coverage Results" MODIFIED="1428099641239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
     <SUITE FILE_PATH="coverage/katas-eis@CharCounter_should_return__b__nil__when_string_is_a__katas_eis.coverage" NAME="CharCounter should return {b=&gt;nil} when string is a: katas-eis Coverage Results" MODIFIED="1428101834680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
     <SUITE FILE_PATH="coverage/katas-eis@char_counter.coverage" NAME="char_counter Coverage Results" MODIFIED="1428101725691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter/model" MODULE_NAME="katas-eis" />
-    <SUITE FILE_PATH="coverage/katas-eis@Run_spec__char_counter_spec___katas_eis.coverage" NAME="Run spec 'char_counter_spec': katas-eis Coverage Results" MODIFIED="1428273439097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
+    <SUITE FILE_PATH="coverage/katas-eis@Run_spec__char_counter_spec___katas_eis.coverage" NAME="Run spec 'char_counter_spec': katas-eis Coverage Results" MODIFIED="1428273761231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
     <SUITE FILE_PATH="coverage/katas-eis@CharCounter__katas_eis.coverage" NAME="CharCounter: katas-eis Coverage Results" MODIFIED="1428101172198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -40,8 +42,8 @@
       <file leaf-file-name="char_counter.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/char_counter/model/char_counter.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -50,8 +52,8 @@
       <file leaf-file-name="char_counter_spec.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/char_counter/spec/char_counter_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6910755" vertical-offset="238" max-vertical-offset="735">
-              <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.7894737" vertical-offset="270" max-vertical-offset="735">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,8 +67,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/char_counter/model/char_counter.rb" />
         <option value="$PROJECT_DIR$/char_counter/spec/char_counter_spec.rb" />
+        <option value="$PROJECT_DIR$/char_counter/model/char_counter.rb" />
       </list>
     </option>
   </component>
@@ -454,7 +456,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32902297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32902297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -508,16 +510,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/char_counter/model/char_counter.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/char_counter/spec/char_counter_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6910755" vertical-offset="238" max-vertical-offset="735">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.7894737" vertical-offset="270" max-vertical-offset="735">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
