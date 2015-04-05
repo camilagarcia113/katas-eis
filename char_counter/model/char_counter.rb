@@ -1,8 +1,11 @@
 class CharCounter
 
-  def count(key)
-    dic = Hash.new
-    dic[key] = 1
-    dic
+  def self.count(word)
+    hash = Hash.new(0)
+    word.each_char do |char|
+      next unless char =~/\w/
+      hash[char] += 1
+    end
+    hash
   end
 end
