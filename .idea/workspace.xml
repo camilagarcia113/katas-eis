@@ -24,7 +24,7 @@
     <SUITE FILE_PATH="coverage/katas-eis@CharCounter_should_return__a__2_t__1_d__1_0__1___when_string_is_atado__katas_eis.coverage" NAME="CharCounter should return {a=&gt;2,t=&gt;1,d=&gt;1,0=&gt;1 } when string is atado: katas-eis Coverage Results" MODIFIED="1428099641239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
     <SUITE FILE_PATH="coverage/katas-eis@CharCounter_should_return__b__nil__when_string_is_a__katas_eis.coverage" NAME="CharCounter should return {b=&gt;nil} when string is a: katas-eis Coverage Results" MODIFIED="1428101834680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
     <SUITE FILE_PATH="coverage/katas-eis@char_counter.coverage" NAME="char_counter Coverage Results" MODIFIED="1428101725691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter/model" MODULE_NAME="katas-eis" />
-    <SUITE FILE_PATH="coverage/katas-eis@Run_spec__char_counter_spec___katas_eis.coverage" NAME="Run spec 'char_counter_spec': katas-eis Coverage Results" MODIFIED="1428273761231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
+    <SUITE FILE_PATH="coverage/katas-eis@Run_spec__char_counter_spec___katas_eis.coverage" NAME="Run spec 'char_counter_spec': katas-eis Coverage Results" MODIFIED="1428278357939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
     <SUITE FILE_PATH="coverage/katas-eis@CharCounter__katas_eis.coverage" NAME="CharCounter: katas-eis Coverage Results" MODIFIED="1428101172198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/char_counter" MODULE_NAME="katas-eis" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -43,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/char_counter/model/char_counter.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -52,8 +52,8 @@
       <file leaf-file-name="char_counter_spec.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/char_counter/spec/char_counter_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7894737" vertical-offset="270" max-vertical-offset="735">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.3729977" vertical-offset="298" max-vertical-offset="735">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -511,15 +511,15 @@
     <entry file="file://$PROJECT_DIR$/char_counter/model/char_counter.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/char_counter/spec/char_counter_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7894737" vertical-offset="270" max-vertical-offset="735">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.3729977" vertical-offset="298" max-vertical-offset="735">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
