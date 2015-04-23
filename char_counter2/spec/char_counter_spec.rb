@@ -29,7 +29,7 @@ describe 'CharCounter' do
     dic['o'].should be 1
     dic.size.should be 4
   end
-=begin
+
   it 'should return {} when string is empty' do
     dic = CharCounter.count('')
     dic.size.should be 0
@@ -39,5 +39,5 @@ describe 'CharCounter' do
     dic = CharCounter.count(nil)
     dic.size.should be 0
   end
-=end
+
 end
