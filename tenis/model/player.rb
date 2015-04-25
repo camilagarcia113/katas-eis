@@ -18,4 +18,8 @@ class Player
     return @points
   end
 
+  def score_a_point
+    @points += 15
+  end
+
 end
