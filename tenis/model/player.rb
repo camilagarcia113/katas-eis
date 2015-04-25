@@ -19,7 +19,11 @@ class Player
   end
 
   def score_a_point
-    @points += 15
+    if (@points.eql? 0) || (@points.eql? 15)
+      @points += 15
+    else
+      @points += 10
+    end
   end
 
 end
