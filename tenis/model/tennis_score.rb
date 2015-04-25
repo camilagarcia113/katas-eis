@@ -5,12 +5,12 @@ class TennisScore
     @player2 = another_player
   end
 
-  def get_set_points
-    return "(" + @player1.get_set_points.to_s + "," + @player2.get_set_points.to_s + ")"
+  def get_set_score
+    return "(" + @player1.get_set_score.to_s + "," + @player2.get_set_score.to_s + ")"
   end
 
-  def get_game_points
-    return "(" + @player1.get_game_points.to_s + "," + @player2.get_game_points.to_s + ")"
+  def get_game_score
+    return "(" + @player1.get_game_score.to_s + "," + @player2.get_game_score.to_s + ")"
   end
 
 end
