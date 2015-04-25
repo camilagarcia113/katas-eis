@@ -21,9 +21,22 @@ class Player
   def score_a_point
     if (@points.eql? 0) || (@points.eql? 15)
       @points += 15
-    else
-      @points += 10
+    elsif @points.eql?30
+      @points = 40
     end
+  end
+
+  def set_points_to_0
+    @points = 0
+  end
+
+  def win_a_game
+    self.set_points_to_0
+    self.score_a_game_point
+  end
+
+  def score_a_game_point
+    @games += 1
   end
 
 end

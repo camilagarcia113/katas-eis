@@ -6,22 +6,26 @@ class TennisScore
   end
 
   def get_set_score
-    return "(" + @player1.get_set_score.to_s + "," + @player2.get_set_score.to_s + ")"
+    return "Sets: (" + @player1.get_set_score.to_s + "," + @player2.get_set_score.to_s + ")"
   end
 
   def get_game_score
-    return "(" + @player1.get_game_score.to_s + "," + @player2.get_game_score.to_s + ")"
+    return "Games: (" + @player1.get_game_score.to_s + "," + @player2.get_game_score.to_s + ")"
   end
 
   def get_points
-    return "(" + @player1.get_points.to_s + "," + @player2.get_points.to_s + ")"
+    return "Points: (" + @player1.get_points.to_s + "," + @player2.get_points.to_s + ")"
   end
 
-  def get_player1
-    return @player1
+  def set_players_points_to_0
+    @player1.set_points_to_0
+    @player2.set_points_to_0
   end
 
-  def get_player2
-    return @player2
+  def player_scores_a_point(a_player)
+    a_player.score_a_point
   end
+
+
+
 end
