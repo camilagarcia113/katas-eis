@@ -18,5 +18,9 @@ class TennisMatch
     return @tennis_score.get_points
   end
 
+  def point_scored_by(a_player)
+    @tennis_score.player_scores_a_point(a_player)
+  end
+
 
 end

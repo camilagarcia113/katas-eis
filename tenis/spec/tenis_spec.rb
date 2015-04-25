@@ -31,16 +31,17 @@ describe 'TennisScore' do
     tennis_match = TennisMatch.new(nadal, federer, tennis_score)
     tennis_match.get_points.should == ("Points: (0,0)")
   end
-=begin
+
   #TEST 4
   it 'should add 15 to nadals points when he scores the first time' do
     nadal = Player.new
     federer = Player.new
     tennis_score = TennisScore.new(nadal, federer)
-    tennis_score.get_player1.score_a_point
-    tennis_score.get_points.should == ("Points: (15,0)")
+    tennis_match = TennisMatch.new(nadal, federer, tennis_score)
+    tennis_match.point_scored_by(nadal)
+    tennis_match.get_points.should == ("Points: (15,0)")
   end
-
+=begin
   #TEST 5
   it 'should show 30 points to federer when he scores 2 times' do
     nadal = Player.new

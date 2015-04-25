@@ -23,7 +23,11 @@ class TennisScore
   end
 
   def player_scores_a_point(a_player)
-    a_player.score_a_point
+    if (a_player.get_points.eql? 0) || (a_player.get_points.eql? 15)
+      a_player.sum_points(15)
+    elsif a_player.get_points.eql?30
+      a_player.sum_points(10)
+    end
   end
 
 
