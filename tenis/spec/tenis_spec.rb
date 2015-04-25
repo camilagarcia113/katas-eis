@@ -48,5 +48,17 @@ describe 'TennisScore' do
     tennis_score.get_points.should == ("(15,30)")
   end
 
+  #TEST 6
+  it 'should show 40 points to federer when he scores 3 times' do
+    nadal = Player.new
+    federer = Player.new
+    tennis_score = TennisScore.new(nadal, federer)
+    tennis_score.get_player1.score_a_point
+    tennis_score.get_player2.score_a_point
+    tennis_score.get_player2.score_a_point
+    tennis_score.get_player2.score_a_point
+    tennis_score.get_points.should == ("(15,40)")
+  end
+
 end
 
