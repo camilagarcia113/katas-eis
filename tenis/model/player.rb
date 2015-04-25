@@ -14,4 +14,8 @@ class Player
     return @games
   end
 
+  def get_points
+    return @points
+  end
+
 end

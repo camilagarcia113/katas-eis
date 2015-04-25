@@ -13,4 +13,7 @@ class TennisScore
     return "(" + @player1.get_game_score.to_s + "," + @player2.get_game_score.to_s + ")"
   end
 
+  def get_points
+    return "(" + @player1.get_points.to_s + "," + @player2.get_points.to_s + ")"
+  end
 end
