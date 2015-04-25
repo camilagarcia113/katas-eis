@@ -10,5 +10,10 @@ class TennisMatch
     return @tennis_score.get_set_score
   end
 
+  def get_game_score
+    return @tennis_score.get_game_score
+  end
+  
+
 
 end
