@@ -13,7 +13,10 @@ class TennisMatch
   def get_game_score
     return @tennis_score.get_game_score
   end
-  
+
+  def get_points
+    return @tennis_score.get_points
+  end
 
 
 end

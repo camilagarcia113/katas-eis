@@ -23,15 +23,15 @@ describe 'TennisScore' do
     tennis_match.get_game_score.should ==("Games: (0,0)")
   end
 
-=begin
   #TEST 3
   it 'should have both players points in 0 when the match begins' do
     nadal = Player.new
     federer = Player.new
     tennis_score = TennisScore.new(nadal, federer)
-    tennis_score.get_points.should == ("Points: (0,0)")
+    tennis_match = TennisMatch.new(nadal, federer, tennis_score)
+    tennis_match.get_points.should == ("Points: (0,0)")
   end
-
+=begin
   #TEST 4
   it 'should add 15 to nadals points when he scores the first time' do
     nadal = Player.new
