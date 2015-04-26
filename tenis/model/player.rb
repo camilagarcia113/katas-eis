@@ -26,6 +26,7 @@ class Player
 
   def set_points_to_0
     @point_counter = 0
+    @points = 0
   end
 
   def sum_game_points
