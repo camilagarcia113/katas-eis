@@ -97,5 +97,21 @@ describe 'TennisScore' do
     tennis_match.point_scored_by(nadal)
     tennis_match.get_points.should == ("Points: (A,40)")
   end
+
+  #TEST 9
+  it 'should show 0 points and 0 game points for both players and 1 set point for nadal after he wins the 6th game' do
+    nadal = Player.new
+    federer = Player.new
+    tennis_score = TennisScore.new(nadal, federer)
+    tennis_match = TennisMatch.new(nadal, federer, tennis_score)
+    tennis_match.point_scored_by(federer)
+    tennis_match.point_scored_by(federer)
+    for points_made in 1..25
+      tennis_match.point_scored_by(nadal)
+    end
+    tennis_match.get_points.should == ("Points: (0,0)")
+    tennis_match.get_game_score.should == ("Games: (0,0)")
+    tennis_match.get_set_score.should == ("Sets: (1,0)")
+  end
 end
 
