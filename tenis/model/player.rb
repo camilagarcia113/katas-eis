@@ -3,6 +3,8 @@ class Player
   def initialize
     @sets = 0
     @games = 0
+    @possible_points = [0, 15, 30, 40, 'A']
+    @point_counter = 0
     @points = 0
   end
 
@@ -15,15 +17,15 @@ class Player
   end
 
   def get_points
-    return @points
+    return @possible_points[@point_counter]
   end
 
-  def sum_points(points)
-    @points += points
+  def score_a_point
+    @point_counter += 1
   end
 
   def set_points_to_0
-    @points = 0
+    @point_counter = 0
   end
 
   def sum_game_points
