@@ -19,7 +19,12 @@ class TennisMatch
   end
 
   def point_scored_by(a_player)
-    @tennis_score.player_scores_a_point(a_player)
+    unless a_player.get_points.eql? 40
+      @tennis_score.player_scores_a_point(a_player)
+    else
+      @tennis_score.set_points_to_0
+      @tennis_score.player_wins_a_game_point(a_player)
+    end
   end
 
 

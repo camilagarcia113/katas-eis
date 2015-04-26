@@ -22,4 +22,11 @@ class Player
     @points += points
   end
 
+  def set_points_to_0
+    @points = 0
+  end
+
+  def sum_game_points
+    @games += 1
+  end
 end

@@ -66,20 +66,21 @@ describe 'TennisScore' do
     tennis_match.point_scored_by(federer)
     tennis_match.get_points.should == ("Points: (15,40)")
   end
-=begin
+
   #TEST 7
   it 'should show 0 points for both players when federer scores 4 times and 1 game point for him' do
     nadal = Player.new
     federer = Player.new
     tennis_score = TennisScore.new(nadal, federer)
-    tennis_score.get_player1.score_a_point
-    tennis_score.get_player2.score_a_point
-    tennis_score.get_player2.score_a_point
-    tennis_score.get_player2.score_a_point
-    tennis_score.get_player2.score_a_point
-    tennis_score.get_points.should == ("Points: (0,0)")
-    tennis_score.get_game_score.should == ("Games: (0,1)")
+    tennis_match = TennisMatch.new(nadal, federer, tennis_score)
+    tennis_match.point_scored_by(nadal)
+    tennis_match.point_scored_by(federer)
+    tennis_match.point_scored_by(federer)
+    tennis_match.point_scored_by(federer)
+    tennis_match.point_scored_by(federer)
+    tennis_match.get_points.should == ("Points: (0,0)")
+    tennis_match.get_game_score.should == ("Games: (0,1)")
   end
-=end
+
 end
 
