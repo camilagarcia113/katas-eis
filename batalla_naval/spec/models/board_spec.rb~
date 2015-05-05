@@ -1,0 +1,16 @@
+require 'rspec'
+require_relative '../model/tennis_score.rb'
+require_relative '../model/player.rb'
+require_relative '../model/tennis_match.rb'
+
+describe 'TennisScore' do
+
+  #TEST 1
+  it 'should have the set points in 0 when the match begins' do
+    nadal = Player.new
+    federer = Player.new
+    tennis_score = TennisScore.new(nadal, federer)
+    tennis_match = TennisMatch.new(nadal, federer, tennis_score)
+    tennis_match.get_set_score.should ==("Sets: (0,0)")
+  end
+

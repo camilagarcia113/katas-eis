@@ -1,0 +1,23 @@
+{
+  "RSpec": {
+    "coverage": {
+    },
+    "timestamp": 1430836693
+  },
+  "Cucumber Features": {
+    "coverage": {
+      "/home/camila/Ingenieria de Software/katas-eis/batalla_naval/app/models/Board.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1430836695
+  }
+}
