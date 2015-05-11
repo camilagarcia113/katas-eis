@@ -7,3 +7,8 @@ Feature: Shoot
     Scenario: Shoot and hit
     Given I shoot to position “3:3”
     Then I get hit
+
+    @wip
+    Scenario: Shoot and damage
+    Given I shoot to position “3:3”
+    Then I get hit

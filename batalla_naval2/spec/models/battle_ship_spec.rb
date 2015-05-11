@@ -32,4 +32,12 @@ describe 'a Board' do
     expect(board.shoot_to_position(3, 3)).to eq('Ship sinked')
   end
 
+
+  #TEST 5
+  it 'should hit the large ship in position 3:3 when i shoot it' do
+    board = Board.new 5,5
+    board.put_large_ship(3, 3, 'vertical')
+    expect(board.shoot_to_position(3, 3)).to eq('Ship damaged')
+  end
+
 end
