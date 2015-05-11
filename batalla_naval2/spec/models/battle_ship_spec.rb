@@ -1,5 +1,7 @@
 require 'rspec'
 require_relative '../../app/models/Board.rb'
+require_relative '../../app/models/Ships.rb'
+
 
 describe 'a Board' do
 
@@ -9,9 +11,11 @@ describe 'a Board' do
   end
 
   #TEST 2
-#  it 'should not have position 3:3 empty when i create a small ship in that position' do
-#	@board.put_ship_in_position(1, 3, 3)  	
-#	expect(@board[3,3]).to eq 1
- # end
+  it 'should not have position 3:3 empty when i create a small ship there' do
+    board = Board.new 5,5
+    small_ship = Small_Ship.new
+    board.put_ship(small_ship, 3, 3)
+    expect(board.is_occupied?(3,3)).to eq(true)
+  end
 
 end
