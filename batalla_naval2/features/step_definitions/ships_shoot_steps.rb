@@ -1,18 +1,15 @@
 require_relative '../../app/models/Board.rb'
 require_relative '../../app/models/Ships.rb'
 
-Given(/^a small ship in position: “(\d+):(\d+)”$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+
+Given(/^a small ship in position: “(\d+):(\d+)”$/) do |x, y|
+  @board.put_small_ship x.to_i, y.to_i
 end
 
-Given(/^a large vertical ship in position: "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Given(/^I shoot to position “(\d+):(\d+)”$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+Given(/^I shoot to position “(\d+):(\d+)”$/) do |x, y|
+  @result = @board.shoot_to_position x.to_i, y.to_i
 end
 
 Then(/^I get hit$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@result).to eq("Ship sinked")
 end
