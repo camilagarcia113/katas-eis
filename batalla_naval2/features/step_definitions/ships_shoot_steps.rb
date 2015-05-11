@@ -13,3 +13,20 @@ end
 Then(/^I get hit$/) do
   expect(@result).to eq("Ship sinked")
 end
+
+Given(/^a large ship in position: “(\d+):(\d+)”$/) do |x, y|
+  @board.put_large_ship x.to_i, y.to_i, 'vertical'
+end
+
+Given(/^I shoot to “(\d+):(\d+)”$/) do |x, y|
+  @result = @board.shoot_to_position x.to_i, y.to_i
+end
+
+Then(/^I get damaged$/) do
+  expect(@result).to eq("Ship damaged")
+end
+
+
+
+
+
