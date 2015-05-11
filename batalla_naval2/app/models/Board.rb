@@ -23,4 +23,8 @@ class Board
     @board[x][y].occupied?
   end
 
+  def shoot_to_position (x, y)
+    @board[x][y].shoot
+  end
+
 end
