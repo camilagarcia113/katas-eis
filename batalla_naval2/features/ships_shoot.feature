@@ -16,3 +16,10 @@ Feature: Shoot
     Scenario: Shoot and miss
       Given I shoot to position “4:4”
       Then I get water
+
+    @wip
+    Scenario: Shoot and sink
+      Given I shoot to position “2:2”
+      Then I get hit
+      And I shoot to position “2:1”
+      Then I get sink

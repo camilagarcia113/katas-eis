@@ -21,7 +21,10 @@ end
 
 class Large_Ship < Ship
 
-  @is_damaged = false
+  def initialize(direction)
+    @is_damaged = false
+    @direction = direction
+  end
 
   def shoot
     if @is_damaged
@@ -30,6 +33,10 @@ class Large_Ship < Ship
       @is_damaged = true
       "Ship damaged"
     end
+  end
+
+  def direction
+    @direction
   end
 
 end

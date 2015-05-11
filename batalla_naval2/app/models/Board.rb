@@ -8,14 +8,13 @@ class Board
     @board[x][y] = Small_Ship.new
   end
 
-  def put_large_ship (x, y, direction)
-    large_ship = Large_Ship.new
-    unless direction.eql? 'vertical'
-      @board[x][y] = large_ship
-      @board[x][y+1] = large_ship
+  def put_large_ship (x, y, ship)
+    if ship.direction.eql?'vertical'
+      @board[x][y] = ship
+      @board[x][y-1] = ship
     else
-      @board[x][y] = large_ship
-      @board[x+1][y] = large_ship
+      @board[x][y] = ship
+      @board[x+1][y] = ship
     end
   end
 
