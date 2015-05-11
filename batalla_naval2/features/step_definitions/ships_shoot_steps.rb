@@ -26,6 +26,9 @@ Then(/^I get damaged$/) do
   expect(@result).to eq("Ship damaged")
 end
 
+Then(/^I get water$/) do
+  expect(@result).to eq("Water")
+end
 
 
 
