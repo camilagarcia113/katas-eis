@@ -21,9 +21,8 @@ end
 
 class Large_Ship < Ship
 
-  def initialize(direction)
+  def initialize
     @is_damaged = false
-    @direction = direction
   end
 
   def shoot
