@@ -14,7 +14,7 @@ end
 class Small_Ship < Ship
 
   def shoot
-    "Ship sinked"
+    "Ship sunk"
   end
 
 end
@@ -27,16 +27,13 @@ class Large_Ship < Ship
 
   def shoot
     if @is_damaged
-      "Ship sinked"
+      'Ship sunk'
     else
       @is_damaged = true
-      "Ship damaged"
+      'Ship damaged'
     end
   end
 
-  def direction
-    @direction
-  end
 
 end
 

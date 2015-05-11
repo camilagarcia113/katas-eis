@@ -11,11 +11,11 @@ Given(/^I shoot to position “(\d+):(\d+)”$/) do |x, y|
 end
 
 Then(/^I get hit$/) do
-  expect(@result).to eq("Ship sinked")
+  expect(@result).to eq("Ship sunk")
 end
 
 Given(/^a large ship in position: “(\d+):(\d+)”$/) do |x, y|
-  @board.put_large_ship x.to_i, y.to_i, 'vertical'
+  @board.put_large_ship x.to_i, y.to_i
 end
 
 Given(/^I shoot to “(\d+):(\d+)”$/) do |x, y|
@@ -28,6 +28,10 @@ end
 
 Then(/^I get water$/) do
   expect(@result).to eq("Water")
+end
+
+Then(/^I get sink$/) do
+  expect(@result).to eq("Ship sunk")
 end
 
 

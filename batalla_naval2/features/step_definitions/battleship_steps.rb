@@ -15,7 +15,7 @@ Then(/^position "(\d+):(\d+)" is not empty$/) do |x, y|
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do |x, y|
-  @board.put_large_ship x.to_i, y.to_i, 'horizontal'
+  @board.put_large_ship x.to_i, y.to_i
 end
 
 

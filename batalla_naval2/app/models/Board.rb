@@ -8,15 +8,10 @@ class Board
     @board[x][y] = Small_Ship.new
   end
 
-  def put_large_ship (x, y, direction)
+  def put_large_ship (x, y)
     large_ship = Large_Ship.new
-    unless direction.eql? 'vertical'
-      @board[x][y] = large_ship
-      @board[x+1][y] = large_ship
-    else
-      @board[x][y] = large_ship
-      @board[x][y-1] = large_ship
-    end
+    @board[x][y] = large_ship
+    @board[x][y+1] = large_ship
   end
 
   def is_occupied? (x, y)

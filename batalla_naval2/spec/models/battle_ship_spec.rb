@@ -18,25 +18,25 @@ describe 'a Board' do
   end
 
   #TEST 3
-  it 'should not have position 3:3 and position 3:2 empty when i create a large ship there' do
+  it 'should not have position 3:3 and position 3:4 empty when i create a large ship there' do
     board = Board.new 5,5
-    board.put_large_ship(3,3, 'vertical')
+    board.put_large_ship(3,3)
     expect(board.is_occupied?(3,3)).to eq(true)
-    expect(board.is_occupied?(3,2)).to eq(true)
+    expect(board.is_occupied?(3,4)).to eq(true)
   end
 
   #TEST 4
   it 'should hit the small ship in position 3:3 when i shoot it' do
     board = Board.new 5,5
     board.put_small_ship(3, 3)
-    expect(board.shoot_to_position(3, 3)).to eq('Ship sinked')
+    expect(board.shoot_to_position(3, 3)).to eq('Ship sunk')
   end
 
 
   #TEST 5
   it 'should hit the large ship in position 2:2 when i shoot it' do
     board = Board.new 5,5
-    board.put_large_ship(2, 2, 'vertical')
+    board.put_large_ship(2,2)
     expect(board.shoot_to_position(2, 2)).to eq('Ship damaged')
   end
 
@@ -49,10 +49,9 @@ describe 'a Board' do
   #TEST 7
   it 'should sink the large ship in 2:2 when i shoot it twice' do
     board = Board.new 5,5
-    board.put_large_ship(2, 2, 'vertical')
-   expect(board.shoot_to_position(2, 2)).to eq('Ship damaged')
-#   expect(board.shoot_to_position(2, 1).to eq('Ship sinked'))
-
+    board.put_large_ship(2,2)
+    expect(board.shoot_to_position(2, 2)).to eq('Ship damaged')
+    expect(board.shoot_to_position(2, 3)).to eq('Ship sunk')
   end
 
 end
