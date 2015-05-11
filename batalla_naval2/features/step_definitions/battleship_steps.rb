@@ -1,5 +1,5 @@
 require_relative '../../app/models/Board.rb'
-require_relative '../../app/models/Ships.rb'
+require_relative '../../app/models/Ships_and_Water.rb'
 
 
 Given(/^a board with dimensions "(\d+)" x "(\d+)"$/) do |x, y|

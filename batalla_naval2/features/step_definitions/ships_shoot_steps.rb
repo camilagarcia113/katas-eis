@@ -1,5 +1,5 @@
 require_relative '../../app/models/Board.rb'
-require_relative '../../app/models/Ships.rb'
+require_relative '../../app/models/Ships_and_Water.rb'
 
 
 Given(/^a small ship in position: “(\d+):(\d+)”$/) do |x, y|
@@ -25,6 +25,7 @@ end
 Then(/^I get damaged$/) do
   expect(@result).to eq("Ship damaged")
 end
+
 
 
 

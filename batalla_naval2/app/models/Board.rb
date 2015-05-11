@@ -1,7 +1,7 @@
 class Board
 
   def initialize(x, y)
-    @board = Array.new(x) {Array.new(y)}
+    @board = Array.new(x) {Array.new(y) { Water.new }}
   end
 
   def put_small_ship (x, y)
@@ -24,7 +24,7 @@ class Board
   end
 
   def shoot_to_position (x, y)
-    @board[x][y].shoot
+      @board[x][y].shoot
   end
 
 end

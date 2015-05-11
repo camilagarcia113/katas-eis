@@ -33,3 +33,13 @@ class Large_Ship < Ship
   end
 
 end
+
+class Water
+  def occupied?
+    false
+  end
+
+  def shoot
+    'Water'
+  end
+end

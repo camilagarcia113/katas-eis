@@ -1,6 +1,6 @@
 require 'rspec'
 require_relative '../../app/models/Board.rb'
-require_relative '../../app/models/Ships.rb'
+require_relative '../../app/models/Ships_and_Water.rb'
 
 
 describe 'a Board' do
@@ -38,6 +38,12 @@ describe 'a Board' do
     board = Board.new 5,5
     board.put_large_ship(2, 2, 'vertical')
     expect(board.shoot_to_position(2, 2)).to eq('Ship damaged')
+  end
+
+  #TEST 6
+  it 'should hit the water when i shoot to position 4:4' do
+    board = Board.new 5,5
+    expect(board.shoot_to_position(4,4)).to eq('Water')
   end
 
 end

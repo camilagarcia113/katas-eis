@@ -12,3 +12,8 @@ Feature: Shoot
     Scenario: Shoot and damage large ship
       Given I shoot to “2:2”
       Then I get damaged
+
+    @wip
+    Scenario: Shoot and miss
+      Given I shoot to position “4:4”
+      Then I get water
