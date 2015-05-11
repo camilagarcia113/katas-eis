@@ -1,0 +1,19 @@
+require 'matrix'
+
+class Board
+
+  attr_reader :board
+
+  def initialize(x,y)
+    @board = Matrix.zero(x, y)
+  end
+
+  def number_of_rows
+    @board.row_size
+  end
+
+  def number_of_columns
+    @board.column_size
+  end
+
+end
