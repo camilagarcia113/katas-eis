@@ -2,7 +2,7 @@
 class Board
 
   def initialize(x, y)
-    @board = Array.new(x) {Array.new(y) { }}
+    @board = Array.new(x) {Array.new(y) { Water.new }}
   end
 
   def put_small_ship (x, y)
