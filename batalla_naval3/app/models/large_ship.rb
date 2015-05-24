@@ -1,5 +1,5 @@
 require_relative '../../app/models/ship.rb'
 
-class Small_Ship < Ship
+class Large_Ship < Ship
 
 end

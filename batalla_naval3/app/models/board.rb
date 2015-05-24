@@ -9,6 +9,12 @@ class Board
     @board[x][y] = Small_Ship.new
   end
 
+  def put_large_ship (x, y)
+    large_ship = Large_Ship.new
+    @board[x][y] = large_ship
+    @board[x][y+1] = large_ship
+  end
+
   def is_occupied? (x, y)
     @board[x][y].occupied?
   end
