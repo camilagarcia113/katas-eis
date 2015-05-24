@@ -10,7 +10,6 @@ Feature: Shoot
     Given I shoot to position “3:3”
     Then I get hit
 
-  @wip
   Scenario: Shoot and damage large ship
-    Given I shoot to “2:2”
+    Given I shoot to position “2:2”
     Then I get damaged
