@@ -22,3 +22,5 @@ Then(/^I get damaged$/) do
   expect(@result).to eq ("Ship damaged")
 end
 
+
+
