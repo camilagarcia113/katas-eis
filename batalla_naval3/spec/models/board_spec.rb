@@ -29,4 +29,11 @@ end
    expect(board.is_occupied?(3,3)).to eq(true)
    expect(board.is_occupied?(3,4)).to eq(true)
  end
+
+ #TEST 4
+ it 'should hit the ship in position 3:3 when i shoot it' do
+   board = Board.new 5,5
+   board.put_small_ship(3, 3)
+   expect(board.shoot_to_position(3, 3)).to eq('Ship sunk')
+ end
 end
