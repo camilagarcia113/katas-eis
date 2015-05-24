@@ -5,9 +5,6 @@ require_relative '../../app/models/large_ship.rb'
 
 describe 'Board' do
 
- before (:each) do
- @board = Board.new 5,5
- end
 
  #TEST 1
  it 'should have created a Board' do
