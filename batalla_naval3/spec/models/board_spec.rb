@@ -27,5 +27,11 @@ end
    expect(board.is_occupied?(3,4)).to eq(true)
  end
 
+  #TEST 4
+  it 'should raise an error when i try to create a small ship in an invalid location' do
+    board = Board.new 5,5
+    expect {board.put_small_ship(6, 6)}.to raise_error
+  end
+
 
 end

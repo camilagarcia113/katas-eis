@@ -13,3 +13,8 @@ Feature: Ships create
     Given I create a large ship in position "3:3"
     Then position "3:3" is not empty
     And position "3:4" is not empty
+
+    @wip
+  Scenario: Create a small ship in a invalid location
+    Given I create a small ship in position "6:6"
+    Then Alert invalid location
