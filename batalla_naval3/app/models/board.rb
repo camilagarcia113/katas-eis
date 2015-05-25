@@ -33,7 +33,11 @@ class Board
   end
 
   def shoot_to_position (x, y)
-    @board[x][y].shoot
+    if is_invalid_location x, y
+      position_out_of_board_error
+    else
+      @board[x][y].shoot
+    end
   end
 
   def is_invalid_location (x, y)

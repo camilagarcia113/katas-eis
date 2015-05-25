@@ -23,3 +23,7 @@ Feature: Shoot
   Scenario: Shoot and miss
     Given I shoot to position “4:4”
     Then I get water
+@wip
+  Scenario: Shoot to invalid position
+    Given I shoot to position “8:70”
+    Then I get alert invalid location

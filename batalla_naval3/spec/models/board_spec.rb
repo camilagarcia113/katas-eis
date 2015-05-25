@@ -33,11 +33,16 @@ end
     expect {board.put_small_ship(6, 6)}.to raise_error
   end
 
-#TEST 5
+  #TEST 5
   it 'should raise an error when i try to create a large ship in an invalid location' do
     board = Board.new 5,5
     expect {board.put_large_ship(10, 2)}.to raise_error
   end
 
+  #TEST 6
+  it 'should raise an error when i try to shoot an invalid location' do
+    board = Board.new 5,5
+    expect {board.shoot_to_position(8, 70)}.to raise_error
+  end
 
 end
