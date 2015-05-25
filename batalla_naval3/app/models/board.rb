@@ -12,7 +12,7 @@ class Board
 
   def put_small_ship (x, y)
     if is_invalid_location x, y
-      raise 'Position out of board'
+      position_out_of_board_error
     else
       @board[x][y] = Small_Ship.new
     end
@@ -20,8 +20,12 @@ class Board
 
   def put_large_ship (x, y)
     large_ship = Large_Ship.new
-    @board[x][y] = large_ship
-    @board[x][y+1] = large_ship
+    if is_invalid_location(x, y) || is_invalid_location(x, y+1)
+      position_out_of_board_error
+    else
+      @board[x][y] = large_ship
+      @board[x][y+1] = large_ship
+    end
   end
 
   def is_occupied? (x, y)
@@ -34,5 +38,9 @@ class Board
 
   def is_invalid_location (x, y)
     @x < x && @y < y
-  end
+    end
+
+    def position_out_of_board_error
+      raise 'Position out of board'
+    end
 end
