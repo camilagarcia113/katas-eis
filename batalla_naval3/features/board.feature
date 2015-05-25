@@ -17,6 +17,5 @@ Feature: Ships create
   Scenario: Create a small ship in a invalid location
     Then I create a small ship in an invalid position "6:6" and Alert invalid location
 
-  @wip
   Scenario: Create a large ship in a invalid location
-    Then I create a large ship in an invalid position "10: 2" and Alert invalid location
+    Then I create a large ship in an invalid position "10:2" and Alert invalid location
