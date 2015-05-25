@@ -18,4 +18,7 @@ Given(/^I create a large ship in position "(\d+):(\d+)"$/) do |x, y|
   @board.put_large_ship x.to_i, y.to_i
 end
 
+Then(/^I create a small ship in an invalid position "(\d+):(\d+)" and Alert invalid location$/) do | x ,y|
+  expect{@board.put_small_ship x.to_i, y.to_i}.to raise_error
+end
 
