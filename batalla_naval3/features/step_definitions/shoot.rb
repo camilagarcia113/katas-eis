@@ -27,3 +27,10 @@ Then(/^I get water$/) do
   expect(@result).to eq ("Water")
 end
 
+Then(/^I shoot to an invalid position "(\d+):(\d+)" and Alert invalid location$/) do | x ,y|
+  expect{@board.shoot_to_position x.to_i, y.to_i}.to raise_error
+end
+
+
+
+
