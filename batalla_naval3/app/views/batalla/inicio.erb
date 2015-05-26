@@ -15,8 +15,8 @@
 
 <body>
     <h1>Battleship</h1>
-    <div>
-        <form method="POST" action="new_board">
+
+    <form method="POST" action="new_board">
         <%= csrf_token_field %>
 
         <h4> Create your board!</h4>
@@ -35,13 +35,12 @@
             You created a board with: <%= @x %> columns and <%= @y %> rows.
           </div>
     </form>
-    </div>
 
-    <div>
+
       <form method="POST" action="occupied_position">
         <%= csrf_token_field %>
 
-        Is occupied ?
+        <h4> Check if a position is occupied </h4>
         <div>
           X coord: <input type="text" name="is_occupied_x" />
         </div>
@@ -54,17 +53,16 @@
       <% if @inform_occupied.present? %>
           <%= @inform_occupied %>
       <% end %>
-    </div>
 
-    <div>
+
       <form method="POST" action="put_small_ship">
         <%= csrf_token_field %>
-        Create a small ship at:
+            <h4>Create a small ship at:</h4>
         <div>
-          X coordinate: <input type="text" name="small_ship_x" />
+          X coord: <input type="text" name="small_ship_x" />
         </div>
         <div>
-          Y coordinate: <input type="text" name="small_ship_y" />
+          Y coord: <input type="text" name="small_ship_y" />
         </div>
 
         <div>
@@ -76,11 +74,26 @@
       <% if @inform_small_ship.present? %>
           <%= @inform_small_ship %>
       <% end %>
-    </div>
+
+      <form method="POST" action="put_large_ship">
+        <%= csrf_token_field %>
+        <h4>Create a large ship at:</h4>
+        <div>
+          X coord: <input type="text" name="large_ship_x" />
+        </div>
+        <div>
+          Y coord: <input type="text" name="large_ship_y" />
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-success" id="put_large_ship">Put</button>
+        </div>
+      </form>
 
 
-
-
+      <% if @inform_small_ship.present? %>
+        <%= @inform_small_ship %>
+      <% end %>
 
 </body>
 </html>
