@@ -12,13 +12,13 @@ Feature: Shoot
   Scenario: Shoot and damage large ship
     Given I shoot to position “2:2”
     Then I get damaged
-  
+
   Scenario: Shoot and sink
     Given I shoot to position “2:2”
     Then I get damaged
     And I shoot to position “2:3”
     Then I get hit
-  @wip
+
   Scenario: Shoot and miss
     Given I shoot to position “4:4”
     Then I get water

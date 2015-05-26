@@ -33,7 +33,7 @@ Then(/^I get damaged$/) do
 end
 
 Then(/^I get water$/) do
-  expect(@result).to eq ("Water")
+  page.should have_content("Water")
 end
 
 Then(/^I shoot to an invalid position "(\d+):(\d+)" and Alert invalid location$/) do | x ,y|
