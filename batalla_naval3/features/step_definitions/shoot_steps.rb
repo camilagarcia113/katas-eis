@@ -11,11 +11,14 @@ Given(/^a small ship in position: “(\d+):(\d+)”$/) do |x, y|
 end
 
 Given(/^I shoot to position “(\d+):(\d+)”$/) do |x, y|
-  @result = @board.shoot_to_position x.to_i, y.to_i
+  visit '/'
+  fill_in(:shoot_x, :with => x)
+  fill_in(:shoot_y, :with => y)
+  click_button "submit_shot"
 end
 
 Then(/^I get hit$/) do
-  expect(@result).to eq("Ship sunk")
+  page.should have_content("Ship sunk")
 end
 
 Given(/^a large ship in position: “(\d+):(\d+)”$/) do |x, y|
