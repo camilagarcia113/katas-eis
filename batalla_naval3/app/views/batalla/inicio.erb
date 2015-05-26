@@ -33,8 +33,31 @@
           <button type="submit" class="btn btn-success" id="submit_board">Create</button>
           You created a board with: <%= @x %> columns and <%= @y %> rows.
         </div>
-
     </form>
+
+    <% if @inform_b.present? %>
+        <%= @inform_b %>
+    <% end %>
+
+    <form method="POST" action="put_small_ship">
+        <%= csrf_token_field %>
+        Create a small ship at:
+        <div>
+          X coordinate: <input type="text" name="small_ship_x" />
+        </div>
+        <div>
+          Y coordinate: <input type="text" name="small_ship_x" />
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-success" id="put_small_ship">Put</button>
+        </div>
+    </form>
+
+
+    <% if @inform_small_ship.present? %>
+        <%= @inform_small_ship %>
+    <% end %>
 
 
 </body>

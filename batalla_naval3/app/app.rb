@@ -14,8 +14,21 @@ module Battleship
     post 'new_board' do
       @x = params[:x]
       @y = params[:y]
-      board = Board.new @x.to_i, @y.to_i
+      @board = Board.new @x.to_i, @y.to_i
       session[:board] = @board
+      render 'batalla/inicio'
+    end
+
+    post 'put_small_ship' do
+      @small_ship_x = params[:small_ship_x]
+      @small_ship_y = params[:small_ship_y]
+      board = session[:board]
+      begin
+        board.put_small_ship(@small_ship_x.to_i, @small_ship_y.to_i)
+        @inform_small_ship = 'Congrats!!'
+      rescue Exception => e
+        @inform_small_ship = e.message
+      end
       render 'batalla/inicio'
     end
   end
