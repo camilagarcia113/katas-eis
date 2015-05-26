@@ -1,22 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
+<head>
     <meta charset="utf-8">
-	</head>
-	<body>
 
-	<h1>Hola</h1>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-	<p>El parametro nombre vale: <%= @nombre %></p>
-	
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-	<form method="POST" action="mipagina">
-		 <%= csrf_token_field %>
-		 Establecer nuevo valor para nombre:
-		<input type="text" name="nombre" />
-		<input type="submit" value="enviar" id="boton_enviar"/>
-	</form>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
 
-	</body>
+<body>
+    <h1>Battleship</h1>
+    <form method="POST" action="new_board">
+        <%= csrf_token_field %>
+
+        <h4> Create your board!</h4>
+
+        <div>
+          Number of columns:
+          <input type="text" name="x" />
+        </div>
+        <div>
+          Number of rows:
+          <input type="text" name="y" />
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-success" id="submit_board">Create</button>
+          You created a board with: <%= @x %> columns and <%= @y %> rows.
+        </div>
+
+    </form>
+
+
+</body>
 </html>
