@@ -39,6 +39,10 @@ Then(/^I create a small ship in an invalid position "(\d+):(\d+)" and Alert inva
 end
 
 Then(/^I create a large ship in an invalid position "(\d+):(\d+)" and Alert invalid location$/) do | x ,y|
-  expect{@board.put_large_ship x.to_i, y.to_i}.to raise_error
+  visit '/'
+  fill_in(:large_ship_x, :with => x)
+  fill_in(:large_ship_y, :with => y)
+  click_button "put_large_ship"
+  page.should have_content('Position out of board')
 end
 
