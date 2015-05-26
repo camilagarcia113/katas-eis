@@ -95,5 +95,24 @@
         <%= @inform_large_ship %>
       <% end %>
 
+      <form method="POST" action="shoot">
+        <%= csrf_token_field %>
+         <h4> Shoot at: </h4>
+        <div>
+          X coord: <input type="text" name="shoot_x" />
+        </div>
+        <div>
+          Y coord: <input type="text" name="shoot_y" />
+        </div>
+         <div>
+           <button type="submit" class="btn btn-success" id="submit_shot">Shoot</button>
+         </div>
+      </form>
+
+       <% if @inform_shoot.present? %>
+            <%= @inform_shoot %>
+        <% end %>
+
+
 </body>
 </html>
