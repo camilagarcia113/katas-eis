@@ -2,6 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
+    <title> Battleship </title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -16,103 +17,131 @@
 <body>
     <h1>Battleship</h1>
 
-    <form method="POST" action="new_board">
-        <%= csrf_token_field %>
+    <table class="table table-striped">
+      <tr>
+        <td class="active" width="400">
+          <form method="POST" action="new_board">
+            <%= csrf_token_field %>
 
-        <h4> Create your board!</h4>
+            <h4> Create your board!</h4>
 
-          <div>
-            Number of columns:
-            <input type="text" name="x" />
-          </div>
-          <div>
-            Number of rows:
-            <input type="text" name="y" />
-          </div>
+            <div>
+              Number of columns:
+              <input type="text" name="x" />
+            </div>
+            <div>
+              Number of rows:
+              <input type="text" name="y" />
+            </div>
 
-          <div>
-            <button type="submit" class="btn btn-success" id="submit_board">Create</button>
-            You created a board with: <%= @x %> columns and <%= @y %> rows.
-          </div>
-    </form>
+            <div>
+              <button type="submit" class="btn btn-success" id="submit_board">Create</button>
+              You created a board with: <%= @x %> columns and <%= @y %> rows.
+            </div>
+          </form>
+        </td>
 
-
-      <form method="POST" action="occupied_position">
-        <%= csrf_token_field %>
-
-        <h4> Check if a position is occupied </h4>
-        <div>
-          X coord: <input type="text" name="is_occupied_x" />
-        </div>
-        <div>
-          Y coord: <input type="text" name="is_occupied_y" />
-        </div>
-        <button type="submit" class="btn btn-success" id="submit_occupied_position">Check</button>
-      </form>
-
-      <% if @inform_occupied.present? %>
-          <%= @inform_occupied %>
-      <% end %>
-
-
-      <form method="POST" action="put_small_ship">
-        <%= csrf_token_field %>
+        <td class="success" width="400">
+          <form method="POST" action="put_small_ship">
+            <%= csrf_token_field %>
             <h4>Create a small ship at:</h4>
-        <div>
-          X coord: <input type="text" name="small_ship_x" />
-        </div>
-        <div>
-          Y coord: <input type="text" name="small_ship_y" />
-        </div>
+            <div>
+              X coord: <input type="text" name="small_ship_x" />
+            </div>
+            <div>
+              Y coord: <input type="text" name="small_ship_y" />
+            </div>
 
-        <div>
-          <button type="submit" class="btn btn-success" id="put_small_ship">Put</button>
-        </div>
-      </form>
+            <div>
+              <button type="submit" class="btn btn-success" id="put_small_ship">Put</button>
+            </div>
+          </form>
+
+          <% if @inform_small_ship.present? %>
+              <%= @inform_small_ship %>
+          <% end %>
+        </td>
+
+        <td class="warning" width="400">
+          <form method="POST" action="shoot">
+            <%= csrf_token_field %>
+            <h4> Shoot at: </h4>
+            <div>
+              X coord: <input type="text" name="shoot_x" />
+            </div>
+            <div>
+              Y coord: <input type="text" name="shoot_y" />
+            </div>
+            <div>
+              <button type="submit" class="btn btn-success" id="submit_shot">Shoot</button>
+            </div>
+          </form>
+
+          <% if @inform_shoot.present? %>
+              <%= @inform_shoot %>
+          <% end %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+
+        </td>
+        <td class="success" width="400">
+          <form method="POST" action="put_large_ship">
+            <%= csrf_token_field %>
+            <h4>Create a large ship at:</h4>
+            <div>
+              X coord: <input type="text" name="large_ship_x" />
+            </div>
+            <div>
+              Y coord: <input type="text" name="large_ship_y" />
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-success" id="put_large_ship">Put</button>
+            </div>
+          </form>
 
 
-      <% if @inform_small_ship.present? %>
-          <%= @inform_small_ship %>
-      <% end %>
+          <% if @inform_large_ship.present? %>
+              <%= @inform_large_ship %>
+          <% end %>
+        </td>
 
-      <form method="POST" action="put_large_ship">
-        <%= csrf_token_field %>
-        <h4>Create a large ship at:</h4>
-        <div>
-          X coord: <input type="text" name="large_ship_x" />
-        </div>
-        <div>
-          Y coord: <input type="text" name="large_ship_y" />
-        </div>
+        <td class="warning" width="400">
+          <form method="POST" action="occupied_position">
+            <%= csrf_token_field %>
 
-        <div>
-          <button type="submit" class="btn btn-success" id="put_large_ship">Put</button>
-        </div>
-      </form>
+            <h4> Check if a position is occupied </h4>
+            <div>
+              X coord: <input type="text" name="is_occupied_x" />
+            </div>
+            <div>
+              Y coord: <input type="text" name="is_occupied_y" />
+            </div>
+            <button type="submit" class="btn btn-success" id="submit_occupied_position">Check</button>
+          </form>
 
+          <% if @inform_occupied.present? %>
+              <%= @inform_occupied %>
+          <% end %>
+        </td>
+      </tr>
 
-      <% if @inform_large_ship.present? %>
-        <%= @inform_large_ship %>
-      <% end %>
+    </table>
 
-      <form method="POST" action="shoot">
-        <%= csrf_token_field %>
-         <h4> Shoot at: </h4>
-        <div>
-          X coord: <input type="text" name="shoot_x" />
-        </div>
-        <div>
-          Y coord: <input type="text" name="shoot_y" />
-        </div>
-         <div>
-           <button type="submit" class="btn btn-success" id="submit_shot">Shoot</button>
-         </div>
-      </form>
+    <div class="panel panel-default" style="width:600px"  >
+      <div class="panel-heading">
+        <h4>The rules are simple: </h4>
+      </div>
 
-       <% if @inform_shoot.present? %>
-            <%= @inform_shoot %>
-        <% end %>
-
-
+      <ul class="list-group">
+        <li class="list-group-item">1) Create a board</li>
+        <li class="list-group-item">2) Put your ships in the board. But be careful! You can't put them outside the size you have chosen</li>
+        <li class="list-group-item">3) If you have bad memory, you can always check if a position is occupied or not</li>
+        <li class="list-group-item">4) Start shooting!!</li>
+      </ul>
+    </div>
 </body>
 </html>
