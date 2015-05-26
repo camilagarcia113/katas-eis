@@ -12,7 +12,7 @@ Feature: Shoot
   Scenario: Shoot and damage large ship
     Given I shoot to position “2:2”
     Then I get damaged
-  @wip
+  
   Scenario: Shoot and sink
     Given I shoot to position “2:2”
     Then I get damaged
