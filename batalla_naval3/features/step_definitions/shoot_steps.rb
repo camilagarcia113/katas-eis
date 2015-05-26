@@ -22,11 +22,14 @@ Then(/^I get hit$/) do
 end
 
 Given(/^a large ship in position: “(\d+):(\d+)”$/) do |x, y|
-  @board.put_large_ship x.to_i, y.to_i
+  visit '/'
+  fill_in(:large_ship_x, :with => x)
+  fill_in(:large_ship_y, :with => y)
+  click_button "put_large_ship"
 end
 
 Then(/^I get damaged$/) do
-  expect(@result).to eq ("Ship damaged")
+  page.should have_content("Ship damaged")
 end
 
 Then(/^I get water$/) do
