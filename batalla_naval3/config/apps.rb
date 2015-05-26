@@ -27,10 +27,10 @@
 #
 Padrino.configure_apps do
   # enable :sessions
-  set :session_secret, '01ce1b0d51621cbb79441cccdf4db36a4e08a0574bd9817b9ae58e7172fe7cfd'
-  set :protection, :except => :path_traversal
+  set :session_secret, ENV['session_secret']
+  set :protection, true
   set :protect_from_csrf, true
 end
 
 # Mounts the core application for this project
-Padrino.mount('BatallaNaval3::App', :app_file => Padrino.root('app/app.rb')).to('/')
+Padrino.mount('Battleship::App', :app_file => Padrino.root('app/app.rb')).to('/')
