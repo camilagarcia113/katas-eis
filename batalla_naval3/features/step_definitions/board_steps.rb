@@ -11,17 +11,16 @@ end
 
 Given(/^I create a small ship in position "(\d+):(\d+)"$/) do |x, y|
   visit '/'
-  fill_in(:x_ss, :with => x)
-  fill_in(:y_ss, :with => y)
+  fill_in(:small_ship_x, :with => x)
+  fill_in(:small_ship_y, :with => y)
   click_button "put_small_ship"
 end
 
 Then(/^position "(\d+):(\d+)" is not empty$/) do |x, y|
- #expect(@board.is_occupied? x.to_i, y.to_i).to eq(true)
-  fill_in(:x_e, :with => x)
-  fill_in(:y_e, :with => y)
-  click_button "submit_empty_position"
-  page.should have_content('Position is not empty')
+  fill_in(:is_occupied_x, :with => x)
+  fill_in(:is_occupied_y, :with => y)
+  click_button "submit_occupied_position"
+  page.should have_content('Occupied')
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do |x, y|
