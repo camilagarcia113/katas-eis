@@ -4,10 +4,7 @@ require_relative '../../app/models/large_ship.rb'
 require_relative '../../app/models/water.rb'
 
 Given(/^a small ship in position: “(\d+):(\d+)”$/) do |x, y|
-  visit '/'
-  fill_in(:x, :with => x)
-  fill_in(:y, :with => y)
-  click_button "submit_board"
+  #pending
 end
 
 Given(/^I shoot to position “(\d+):(\d+)”$/) do |x, y|

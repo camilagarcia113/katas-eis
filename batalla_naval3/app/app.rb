@@ -31,5 +31,17 @@ module Battleship
       end
       render 'batalla/inicio'
     end
+
+    post 'occupied_position' do
+      @is_occupied_x = params[:is_occupied_x]
+      @is_occupied_y = params[:is_occupied_y]
+      board = session[:board]
+      if board.is_occupied?(@is_occupied_x.to_i, @is_occupied_y.to_i)
+        @inform_occupied = 'Occupied'
+      else
+        @inform_occupied = 'Free'
+      end
+      render 'batalla/inicio'
+    end
   end
 end

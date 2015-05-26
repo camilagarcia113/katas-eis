@@ -15,31 +15,49 @@
 
 <body>
     <h1>Battleship</h1>
-    <form method="POST" action="new_board">
+    <div>
+        <form method="POST" action="new_board">
         <%= csrf_token_field %>
 
         <h4> Create your board!</h4>
 
-        <div>
-          Number of columns:
-          <input type="text" name="x" />
-        </div>
-        <div>
-          Number of rows:
-          <input type="text" name="y" />
-        </div>
+          <div>
+            Number of columns:
+            <input type="text" name="x" />
+          </div>
+          <div>
+            Number of rows:
+            <input type="text" name="y" />
+          </div>
 
-        <div>
-          <button type="submit" class="btn btn-success" id="submit_board">Create</button>
-          You created a board with: <%= @x %> columns and <%= @y %> rows.
-        </div>
+          <div>
+            <button type="submit" class="btn btn-success" id="submit_board">Create</button>
+            You created a board with: <%= @x %> columns and <%= @y %> rows.
+          </div>
     </form>
+    </div>
 
-    <% if @inform_b.present? %>
-        <%= @inform_b %>
-    <% end %>
+    <div>
+      <form method="POST" action="occupied_position">
+        <%= csrf_token_field %>
 
-    <form method="POST" action="put_small_ship">
+        Is occupied ?
+        <div>
+          X coord: <input type="text" name="is_occupied_x" />
+        </div>
+        <div>
+          Y coord: <input type="text" name="is_occupied_y" />
+        </div>
+        <button type="submit" class="btn btn-success" id="submit_occupied_position">Check</button>
+      </form>
+
+      <% if @inform_occupied.present? %>
+          <%= @inform_occupied %>
+      <% end %>
+    </div>
+
+    <div>
+      <form method="POST" action="put_small_ship">
         <%= csrf_token_field %>
         Create a small ship at:
         <div>
@@ -52,12 +70,16 @@
         <div>
           <button type="submit" class="btn btn-success" id="put_small_ship">Put</button>
         </div>
-    </form>
+      </form>
 
 
-    <% if @inform_small_ship.present? %>
-        <%= @inform_small_ship %>
-    <% end %>
+      <% if @inform_small_ship.present? %>
+          <%= @inform_small_ship %>
+      <% end %>
+    </div>
+
+
+
 
 
 </body>
