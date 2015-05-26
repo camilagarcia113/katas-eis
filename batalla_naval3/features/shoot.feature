@@ -22,6 +22,6 @@ Feature: Shoot
   Scenario: Shoot and miss
     Given I shoot to position “4:4”
     Then I get water
-  @wip
+
   Scenario: Shoot to an invalid location
     Then I shoot to an invalid position "10:2" and Alert invalid location

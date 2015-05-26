@@ -60,7 +60,11 @@ module Battleship
     post 'shoot' do
       @shoot_x = params[:shoot_x]
       @shoot_y = params[:shoot_y]
-      @inform_shoot = session[:board].shoot_to_position(@shoot_x.to_i, @shoot_y.to_i)
+      begin
+        @inform_shoot = session[:board].shoot_to_position(@shoot_x.to_i, @shoot_y.to_i)
+      rescue Exception => e
+        @inform_shoot = e.message
+      end
       render 'batalla/inicio'
     end
   end

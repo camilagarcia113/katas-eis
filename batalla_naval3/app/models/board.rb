@@ -41,8 +41,8 @@ class Board
   end
 
   def is_invalid_location (x, y)
-    @x < x && @y < y
-    end
+    @x < x || @y < y
+  end
 
     def position_out_of_board_error
       raise 'Position out of board'

@@ -37,7 +37,11 @@ Then(/^I get water$/) do
 end
 
 Then(/^I shoot to an invalid position "(\d+):(\d+)" and Alert invalid location$/) do | x ,y|
-  expect{@board.shoot_to_position x.to_i, y.to_i}.to raise_error
+  visit '/'
+  fill_in(:shoot_x, :with => x)
+  fill_in(:shoot_y, :with => y)
+  click_button "submit_shot"
+  page.should have_content("Position out of board")
 end
 
 
