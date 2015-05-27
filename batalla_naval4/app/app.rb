@@ -32,6 +32,19 @@ module Battleship
       render 'batalla/inicio'
     end
 
+    post 'put_large_ship' do
+      @large_ship_x = params[:large_ship_x]
+      @large_ship_y = params[:large_ship_y]
+      board = session[:board]
+      begin
+        board.put_large_ship(@large_ship_x.to_i, @large_ship_y.to_i)
+        @inform_large_ship = 'Congrats!!'
+      rescue Exception => e
+        @inform_large_ship = e.message
+      end
+      render 'batalla/inicio'
+      end
+
     post 'occupied_position' do
       @is_occupied_x = params[:is_occupied_x]
       @is_occupied_y = params[:is_occupied_y]

@@ -23,7 +23,10 @@ Then(/^position "(\d+):(\d+)" is not empty$/) do |x, y|
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do |x, y|
-  #pending
+  visit '/'
+  fill_in(:large_ship_x, :with => x)
+  fill_in(:large_ship_y, :with => y)
+  click_button "put_large_ship"
 end
 
 Then(/^I create a small ship in an invalid position "(\d+):(\d+)" and Alert invalid location$/) do | x ,y|
