@@ -40,6 +40,46 @@
             </div>
           </form>
         </td>
+
+        <td class="success" width="400">
+          <form method="POST" action="put_small_ship">
+            <%= csrf_token_field %>
+            <h4>Create a small ship at:</h4>
+            <div>
+              X coord: <input type="text" name="small_ship_x" />
+            </div>
+            <div>
+              Y coord: <input type="text" name="small_ship_y" />
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-success" id="put_small_ship">Put</button>
+            </div>
+          </form>
+
+          <% if @inform_small_ship.present? %>
+              <%= @inform_small_ship %>
+          <% end %>
+        </td>
+
+        <td class="warning" width="400">
+          <form method="POST" action="occupied_position">
+            <%= csrf_token_field %>
+
+            <h4> Check if a position is occupied </h4>
+            <div>
+              X coord: <input type="text" name="is_occupied_x" />
+            </div>
+            <div>
+              Y coord: <input type="text" name="is_occupied_y" />
+            </div>
+            <button type="submit" class="btn btn-success" id="submit_occupied_position">Check</button>
+          </form>
+
+          <% if @inform_occupied.present? %>
+              <%= @inform_occupied %>
+          <% end %>
+        </td>
     </table>
 
   

@@ -10,11 +10,16 @@ Given(/^a board with dimensions "(.*?)" x "(.*?)"$/) do |x, y|
 end
 
 Given(/^I create a small ship in position "(\d+):(\d+)"$/) do |x, y|
- #pending
+  fill_in(:small_ship_x, :with => x)
+  fill_in(:small_ship_y, :with => y)
+  click_button "put_small_ship"
 end
 
 Then(/^position "(\d+):(\d+)" is not empty$/) do |x, y|
-  #pending
+  fill_in(:is_occupied_x, :with => x)
+  fill_in(:is_occupied_y, :with => y)
+  click_button "submit_occupied_position"
+  page.should have_content('Occupied')
 end
 
 Given(/^I create a large ship in position "(\d+):(\d+)"$/) do |x, y|
