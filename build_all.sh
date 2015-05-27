@@ -7,6 +7,6 @@ cd ..
 cd tenis
 bundle exec rake
 cd ..
-cd batalla_naval3
+cd batalla_naval4
 bundle exec rake
 
