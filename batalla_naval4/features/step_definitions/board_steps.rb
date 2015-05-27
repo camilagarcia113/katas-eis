@@ -30,7 +30,11 @@ Given(/^I create a large ship in position "(\d+):(\d+)"$/) do |x, y|
 end
 
 Then(/^I create a small ship in an invalid position "(\d+):(\d+)" and Alert invalid location$/) do | x ,y|
-  #pending
+  visit '/'
+  fill_in(:small_ship_x, :with => x)
+  fill_in(:small_ship_y, :with => y)
+  click_button "put_small_ship"
+  page.should have_content('Position out of board')
 end
 
 Then(/^I create a large ship in an invalid position "(\d+):(\d+)" and Alert invalid location$/) do | x ,y|
