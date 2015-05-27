@@ -55,6 +55,13 @@ module Battleship
         @inform_occupied = 'Free'
       end
       render 'batalla/inicio'
+    end
+
+    post 'shoot' do
+      @shoot_x = params[:shoot_x]
+      @shoot_y = params[:shoot_y]
+      @inform_shoot = session[:board].shoot_to_position(@shoot_x.to_i, @shoot_y.to_i)
+      render 'batalla/inicio'
       end
   end
 end
