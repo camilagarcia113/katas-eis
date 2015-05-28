@@ -19,9 +19,9 @@ Feature: Shoot
     And I shoot to position “2:3”
     Then I get hit
 
-  #Scenario: Shoot and miss
-    #Given I shoot to position “4:4”
-   # Then I get water
+  Scenario: Shoot and miss
+    Given I shoot to position “4:4”
+    Then I get water
 
   #Scenario: Shoot to an invalid location
    # Then I shoot to an invalid position "10:2" and Alert invalid location
