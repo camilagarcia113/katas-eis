@@ -23,5 +23,5 @@ Feature: Shoot
     Given I shoot to position “4:4”
     Then I get water
 
-  #Scenario: Shoot to an invalid location
-   # Then I shoot to an invalid position "10:2" and Alert invalid location
+  Scenario: Shoot to an invalid location
+    Then I shoot to an invalid position "10:2" and Alert invalid location
